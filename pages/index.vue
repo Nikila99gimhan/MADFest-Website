@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row no-gutters justify="center">
-      <v-img contain max-width="50%" :src="require('~/assets/logo.png')"></v-img>
+      <v-img contain max-width="60%" :src="require('~/assets/logo.png')"></v-img>
     </v-row>
 
     <v-row class="mt-8" no-gutters justify="center">
@@ -9,7 +9,7 @@
     </v-row>
 
     <v-row class="mt-8" no-gutters justify="center">
-      <span style="color: #32ad4a;" class="text-h2 font-weight-bold">Coming Soon...</span>
+      <span style="color: #125596;" class="text-h3 text-center font-weight-bold">Coming Soon...</span>
     </v-row>
 
     <v-row class="mt-8" no-gutters justify="center">
