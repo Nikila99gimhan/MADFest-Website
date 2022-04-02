@@ -9,7 +9,9 @@
     </v-row>
 
     <v-row class="mt-8" no-gutters justify="center">
-      <span style="color: #125596;" class="text-h3 text-center font-weight-bold">Coming Soon...</span>
+      <span style="color: #125596;" class="text-h3 text-center font-weight-bold">
+        <CountDownBanner/>
+      </span>
     </v-row>
 
     <v-row class="mt-8" no-gutters justify="center">
@@ -29,6 +31,15 @@
     </v-row>
   </v-container>
 </template>
+
+
+<script>
+  import CountDownBanner from "../components/CountDownBanner";
+
+  export default {
+    components:CountDownBanner
+  }
+</script>
 
 <style>
 
