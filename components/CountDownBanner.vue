@@ -3,21 +3,21 @@
 
       <v-col cols="12" class="d-md-none d-lg-none d-xl-none"></v-col>
 
-      <v-col cols="4" sm="3" md="2" lg="2" xl="2">
+      <v-col cols="5" sm="3" md="2" lg="2" xl="2">
         <div class="countDownCards" > <span> {{days}} </span> <br/> DAYS</div>
       </v-col>
 
-      <v-col cols="4" sm="3" md="2" lg="2" xl="2">
+      <v-col cols="5" sm="3" md="2" lg="2" xl="2">
         <div class="countDownCards xs-6"> <span> {{hours}} </span> <br/> HOURS</div>
       </v-col>
 
       <v-col cols="12" class="d-md-none d-lg-none d-xl-none"></v-col>
 
-      <v-col cols="4" sm="3" md="2" lg="2" xl="2">
+      <v-col cols="5" sm="3" md="2" lg="2" xl="2">
         <div class="countDownCards"> <span> {{minutes}} </span> <br/> MINUTES</div>
       </v-col>
 
-      <v-col cols="4" sm="3" md="2" lg="2" xl="2">
+      <v-col cols="5" sm="3" md="2" lg="2" xl="2">
         <div class="countDownCards"> <span> {{seconds}} </span> <br/> SECONDS</div>
       </v-col>
     </v-row>
@@ -90,7 +90,16 @@ export default {
     font-size: 17px;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 300px){
+    div.countDownCards {
+      width:100px;
+      height:100px;
+      font-size: 13px;
+    }
+  }
+
+
+  @media only screen and (min-width: 300px) and (max-width: 600px) {
     div.countDownCards {
       margin-top: 15px;
     }
@@ -102,9 +111,4 @@ export default {
     }
   }
 
-  /*  div.countDownCards span{*/
-  /*    font-size: 25px;*/
-  /*  }*/
-
-  /*}*/
 </style>
