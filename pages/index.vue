@@ -8,14 +8,21 @@
       <v-img contain max-width="50%" :src="require('~/assets/logo_line.png')"></v-img>
     </v-row>
 
-    <v-row class="mt-8" no-gutters justify="center">
-      <span style="color: #125596;" class="text-h3 text-center font-weight-bold">
+    <v-row justify="center">
+      <v-btn
+        class="red--text"
+        elevation="7"
+        outlined
+        rounded
+        x-large
+      >Register Here</v-btn>
+    </v-row>
+
+    <v-row>
         <CountDownBanner/>
-      </span>
     </v-row>
 
     <v-row class="mt-8" no-gutters justify="center">
-
       <v-btn target="_blank" href="https://www.facebook.com/ieeecsnsbm" icon>
         <v-icon large>mdi-facebook</v-icon>
       </v-btn>
@@ -37,7 +44,9 @@
   import CountDownBanner from "../components/CountDownBanner";
 
   export default {
-    components:CountDownBanner
+    components : {
+      CountDownBanner
+    }
   }
 </script>
 
