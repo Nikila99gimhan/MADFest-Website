@@ -13,6 +13,7 @@
     "lottie-vuejs": "^0.3.6",
     "nuxt": "^2.15.7",
     "vue-lottie": "^0.2.1",
+    "vue3-flip-countdown": "^0.1.6",
     "vuetify": "^2.5.5"
   },
   "devDependencies": {
