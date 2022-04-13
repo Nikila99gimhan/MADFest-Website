@@ -3,50 +3,83 @@
     <v-main>
       <Nuxt />
     </v-main>
-    <v-footer dark padless>
-      <v-card class="flex" flat tile>
-        <v-card-title class="primary">
-          <strong class="subheading"
-            >Get connected with us on social networks!</strong
-          >
-
-          <v-spacer></v-spacer>
-
-          <v-btn
-            class="ml-2 mr-2 mx-4"
-            target="_blank"
-            href="https://www.facebook.com/ieeecsnsbm"
-            icon
-          >
-            <v-icon large>mdi-facebook</v-icon>
-          </v-btn>
-
-          <v-btn
-            class="ml-2 mr-2 mx-4"
-            target="_blank"
-            href="https://github.com/IEEE-Student-Branch-NSBM"
-            icon
-          >
-            <v-icon large>mdi-github</v-icon>
-          </v-btn>
-
-          <v-btn
-            class="ml-2 mr-2 mx-4"
-            target="_blank"
-            href="https://www.linkedin.com/company/ieee-student-branch-nsbm/"
-            icon
-          >
-            <v-icon large>mdi-linkedin</v-icon>
-          </v-btn>
-        </v-card-title>
-
-        <v-card-text class="py-2 white--text text-center">
-          <span
-            >&copy; {{ new Date().getFullYear() }} IEEE CS Student Chapter of
-            NSBM</span
-          >
-        </v-card-text>
-      </v-card>
+    <v-footer padless color="#ffffff">
+      <v-container>
+        <v-row no-gutters justify="center">
+          <span class="text-center mb-6 mt-8 font-weight-bold footerTitle">
+            ORGANIZED BY
+          </span>
+        </v-row>
+        <v-row class="mb-6">
+          <v-col cols="2"></v-col>
+          <v-col cols="8">
+            <v-row>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/DEpartment.png"
+              /></v-col>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/IEEE.png"
+              /></v-col>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/WIE.png"
+              /></v-col>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/IEEECS.png"
+              /></v-col>
+            </v-row>
+          </v-col>
+          <v-col cols="2"></v-col>
+        </v-row>
+        <hr />
+        <v-row align="center" width="100%">
+          <v-col cols="4" class="copyrightText" align="left">
+            <i>&copy</i> Copyright MAD-FEST 2022. All Rights Reserved - IEEE
+            NSBM
+          </v-col>
+          <v-col cols="4">
+            <v-layout justify-center align-center>
+              <v-flex shrink>
+                <v-img
+                  mx-auto
+                  quality="100"
+                  format="webp"
+                  width="150"
+                  aspect-ratio="1"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/MADFEST.png"
+                />
+              </v-flex> </v-layout
+          ></v-col>
+          <v-col cols="4" class="copyrightText text-right" align="right">
+            Terms of Service <i>&amp</i> Privacy Policy
+          </v-col>
+        </v-row>
+      </v-container>
     </v-footer>
   </v-app>
 </template>
@@ -96,5 +129,13 @@ export default {
   width: 8px;
   opacity: 0.3;
   background-color: #00629b;
+}
+.footerTitle {
+  font-size: 20px;
+  color: #0a142f;
+}
+.copyrightText {
+  font-size: 14px;
+  font-weight: 300;
 }
 </style>
