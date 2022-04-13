@@ -22,18 +22,22 @@
             </v-card-text>
           </v-col>
           <v-col>
-            <v-img
+            <!-- <v-img
               quality="100"
               format="webp"
               fit="contain"
               width="450"
               alt="Brand Logo"
               src="Assets/Home/whatis.png"
-            />
+            /> -->
+            <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/>
+            
           </v-col>
         </v-row>
         <v-row class="dateTime mt-7">
-          <v-col cols="4"><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col>
+          <v-col cols="4"
+            ><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col
+          >
           <v-col cols="4">09.00 AM Onwards</v-col>
           <v-col cols="4">Faculty of Computing</v-col>
         </v-row>
@@ -44,7 +48,12 @@
 
 
 <script>
-export default {};
+import Lottie from "lottie-vuejs";
+export default {
+  components: {
+    Lottie,
+  },
+};
 </script>
 
 <style>
@@ -61,7 +70,7 @@ export default {};
   font-size: 20px;
   font-weight: 300;
 }
-.dateTime{
+.dateTime {
   font-size: 24px;
   font-weight: 500;
   color: white;
