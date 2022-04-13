@@ -1,64 +1,85 @@
 <template>
   <v-app dark>
-    <v-app-bar class="NavBarAcrylic" color="transparent" fixed app>
-      <v-toolbar-title>
-        <v-img width="256" contain :src="require('~/assets/logo_alt.png')" />
-      </v-toolbar-title>
-      <v-spacer />
-
-      <v-list-item v-for="item in items" :key="item.title" link>
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
-      </v-list-item>
-    </v-app-bar>
-    <v-main class="NavBarAcrylic">
-      <v-container>
-        <Nuxt />
-      </v-container>
+    <v-main>
+      <Nuxt />
     </v-main>
-    <v-footer dark padless>
-      <v-card class="flex" flat tile>
-        <v-card-title class="primary">
-          <strong class="subheading"
-            >Get connected with us on social networks!</strong
-          >
-
-          <v-spacer></v-spacer>
-
-          <v-btn
-            class="ml-2 mr-2 mx-4"
-            target="_blank"
-            href="https://www.facebook.com/ieeecsnsbm"
-            icon
-          >
-            <v-icon large>mdi-facebook</v-icon>
-          </v-btn>
-
-          <v-btn
-            class="ml-2 mr-2 mx-4"
-            target="_blank"
-            href="https://github.com/IEEE-Student-Branch-NSBM"
-            icon
-          >
-            <v-icon large>mdi-github</v-icon>
-          </v-btn>
-
-          <v-btn
-            class="ml-2 mr-2 mx-4"
-            target="_blank"
-            href="https://www.linkedin.com/company/ieee-student-branch-nsbm/"
-            icon
-          >
-            <v-icon large>mdi-linkedin</v-icon>
-          </v-btn>
-        </v-card-title>
-
-        <v-card-text class="py-2 white--text text-center">
-          <span
-            >&copy; {{ new Date().getFullYear() }} IEEE CS Student Chapter of
-            NSBM</span
-          >
-        </v-card-text>
-      </v-card>
+    <v-footer padless color="#ffffff">
+      <v-container>
+        <v-row no-gutters justify="center">
+          <span class="text-center mb-6 mt-8 font-weight-bold footerTitle">
+            ORGANIZED BY
+          </span>
+        </v-row>
+        <v-row class="mb-6">
+          <v-col cols="2"></v-col>
+          <v-col cols="8">
+            <v-row>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/DEpartment.png"
+              /></v-col>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/IEEE.png"
+              /></v-col>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/WIE.png"
+              /></v-col>
+              <v-col cols="3"
+                ><v-img
+                  quality="100"
+                  format="webp"
+                  :aspect-ratio="16 / 9"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/Footer/IEEECS.png"
+              /></v-col>
+            </v-row>
+          </v-col>
+          <v-col cols="2"></v-col>
+        </v-row>
+        <hr />
+        <v-row align="center" width="100%">
+          <v-col cols="4" class="copyrightText" align="left">
+            <i>&copy</i> Copyright MAD-FEST 2022. All Rights Reserved - IEEE
+            NSBM
+          </v-col>
+          <v-col cols="4">
+            <v-layout justify-center align-center>
+              <v-flex shrink>
+                <v-img
+                  mx-auto
+                  quality="100"
+                  format="webp"
+                  width="150"
+                  aspect-ratio="1"
+                  contain
+                  alt="Brand Logo"
+                  src="Assets/MADFEST.png"
+                />
+              </v-flex> </v-layout
+          ></v-col>
+          <v-col cols="4" class="copyrightText text-right" align="right">
+            Terms of Service <i>&amp</i> Privacy Policy
+          </v-col>
+        </v-row>
+      </v-container>
     </v-footer>
   </v-app>
 </template>
@@ -70,11 +91,6 @@ export default {
       title: "MADFest",
       loader: null,
       loading4: false,
-      items: [
-        { title: "Home", route: "/" },
-        { title: "Content", route: "/content" },
-        { title: "Settings", route: "/settings" },
-      ],
     };
   },
 
@@ -92,43 +108,34 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
-  font-family: "Poppins";
-}
-.NavBarAcrylic {
-  background-color: transparent;
-  backdrop-filter: blur(10px);
+  font-family: "Poppins", "sans-serif" !important;
+  letter-spacing: -0px;
 }
 
-.context {
-  width: 100%;
-  position: absolute;
-  top: 50vh;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  opacity: 0.3;
+  background-color: #00629b;
 }
-
-.context h1 {
-  text-align: center;
-  color: #fff;
-  font-size: 50px;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  opacity: 1;
+  background-color: #ffffff;
 }
-
-.area {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
+::-webkit-scrollbar {
+  width: 8px;
+  opacity: 0.3;
+  background-color: #00629b;
 }
-
-@keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
+.footerTitle {
+  font-size: 20px;
+  color: #0a142f;
+}
+.copyrightText {
+  font-size: 14px;
+  font-weight: 300;
 }
 </style>

@@ -76,6 +76,16 @@ export default {
     dir: 'docs'
   },
 
+  loading: {
+    color: 'white',
+    height: '5px'
+  },
+
+
+  generate: {
+    dir: 'docs'
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 };
