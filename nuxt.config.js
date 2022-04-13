@@ -37,6 +37,9 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxt/image',
+    '@nuxtjs/pwa',
+    '@nuxtjs/web-vitals',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -60,6 +63,16 @@ export default {
         }
       }
     }
+  },
+
+  loading: {
+    color: 'white',
+    height: '5px'
+  },
+
+
+  generate: {
+    dir: 'docs'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
