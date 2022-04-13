@@ -19,7 +19,6 @@
                   quality="100"
                   format="webp"
                   :aspect-ratio="16 / 9"
-                  :width="width"
                   contain
                   alt="Brand Logo"
                   src="Assets/Footer/DEpartment.png"
@@ -29,7 +28,6 @@
                   quality="100"
                   format="webp"
                   :aspect-ratio="16 / 9"
-                  :width="width"
                   contain
                   alt="Brand Logo"
                   src="Assets/Footer/IEEE.png"
@@ -39,7 +37,6 @@
                   quality="100"
                   format="webp"
                   :aspect-ratio="16 / 9"
-                  :width="width"
                   contain
                   alt="Brand Logo"
                   src="Assets/Footer/WIE.png"
@@ -49,7 +46,6 @@
                   quality="100"
                   format="webp"
                   :aspect-ratio="16 / 9"
-                  :width="width"
                   contain
                   alt="Brand Logo"
                   src="Assets/Footer/IEEECS.png"
@@ -61,7 +57,8 @@
         <hr />
         <v-row align="center" width="100%">
           <v-col cols="4" class="copyrightText" align="left">
-            <i>&copy</i> Copyright MAD-FEST 2022. All Rights Reserved - IEEE NSBM
+            <i>&copy</i> Copyright MAD-FEST 2022. All Rights Reserved - IEEE
+            NSBM
           </v-col>
           <v-col cols="4">
             <v-layout justify-center align-center>
