@@ -1,53 +1,7 @@
 <template>
   <v-app dark>
-    <div class="area">
-      <ul class="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-
-    <v-app-bar class="NavBarAcrylic" color="transparent" fixed app>
-      <v-toolbar-title>
-        <v-img width="256" contain :src="require('~/assets/logo_alt.png')" />
-      </v-toolbar-title>
-      <v-spacer />
-
-      <v-btn large target="_blank" href="https://ieeensbm.org" icon>
-        <v-icon color="primary" large>mdi-web</v-icon>
-      </v-btn>
-
-      <v-btn
-        class="ma-2"
-        :loading="loading4"
-        :disabled="loading4"
-        color="primary"
-        target="_blank"
-        href="https://forms.gle/D44xD9GuXX5YXbvh9"
-        @click="loader = 'loading4'"
-        large
-      >
-        <v-icon left> mdi-account-arrow-right </v-icon>
-        Register Now!
-        <template v-slot:loader>
-          <span class="custom-loader">
-            <v-icon light large>mdi-cached</v-icon>
-          </span>
-        </template>
-      </v-btn>
-    </v-app-bar>
-    <v-main class="NavBarAcrylic">
-      <v-container>
-        <Nuxt />
-      </v-container>
+    <v-main>
+      <Nuxt />
     </v-main>
     <v-footer dark padless>
       <v-card class="flex" flat tile>
@@ -121,177 +75,26 @@ export default {
 </script>
 
 <style>
-.NavBarAcrylic {
-  background-color: transparent;
-  backdrop-filter: blur(10px);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", "sans-serif" !important;
+  letter-spacing: -0px;
 }
 
-body {
-  font-family: "Exo", sans-serif;
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  opacity: 0.3;
+  background-color: #00629b;
 }
-
-.context {
-  width: 100%;
-  position: absolute;
-  top: 50vh;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  opacity: 1;
+  background-color: #ffffff;
 }
-
-.context h1 {
-  text-align: center;
-  color: #fff;
-  font-size: 50px;
-}
-
-.area {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-}
-
-.circles {
-  position: absolute;
-  color: #32ad4a;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.circles li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 20px;
-  height: 20px;
-  background: rgb(18, 95, 169);
-  animation: animate 25s linear infinite;
-  bottom: -150px;
-}
-
-.circles li:nth-child(1) {
-  left: 25%;
-  width: 80px;
-  height: 80px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(2) {
-  left: 10%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 2s;
-  animation-duration: 12s;
-}
-
-.circles li:nth-child(3) {
-  left: 70%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 4s;
-}
-
-.circles li:nth-child(4) {
-  left: 40%;
-  width: 60px;
-  height: 60px;
-  animation-delay: 0s;
-  animation-duration: 18s;
-}
-
-.circles li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
-}
-
-.circles li:nth-child(6) {
-  left: 75%;
-  width: 110px;
-  height: 110px;
-  animation-delay: 3s;
-}
-
-.circles li:nth-child(7) {
-  left: 35%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 7s;
-}
-
-.circles li:nth-child(8) {
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
-}
-
-.circles li:nth-child(9) {
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
-}
-
-.circles li:nth-child(10) {
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-}
-
-.custom-loader {
-  animation: loader 1s infinite;
-  display: flex;
-}
-@-moz-keyframes loader {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes loader {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@-o-keyframes loader {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes loader {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
-  }
-
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
-  }
+::-webkit-scrollbar {
+  width: 8px;
+  opacity: 0.3;
+  background-color: #00629b;
 }
 </style>
