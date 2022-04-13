@@ -6,13 +6,9 @@
       </v-toolbar-title>
       <v-spacer />
 
-      
-        <v-list-item v-for="item in items" :key="item.title" link>
-          
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          
-        </v-list-item>
-      
+      <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item-title>{{ item.title }}</v-list-item-title>
+      </v-list-item>
     </v-app-bar>
     <v-main class="NavBarAcrylic">
       <v-container>
