@@ -22,15 +22,15 @@
             </v-card-text>
           </v-col>
           <v-col>
-            <!-- <v-img
+            <v-img
               quality="100"
               format="webp"
               fit="contain"
               width="450"
               alt="Brand Logo"
               src="Assets/Home/whatis.png"
-            /> -->
-            <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/>
+            />
+            <!-- <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/> -->
             
           </v-col>
         </v-row>
