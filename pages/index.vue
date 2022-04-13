@@ -1,6 +1,5 @@
 <template>
   <div>
-    <nuxt-content :document="index" />
     <v-sheet color="#ffffff" class="pt-8 pb-8 text-center">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
