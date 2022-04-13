@@ -1,9 +1,55 @@
 <template>
   <div>
+    <nuxt-content :document="index" />
+    <v-sheet color="#ffffff" class="pt-8 pb-8 text-center">
+      <v-container>
+        <v-row align="center" no-gutters class="mt-8">
+          <v-col cols="6">
+            <v-layout justify-center align-center>
+              <v-flex shrink>
+                <v-img
+                  mx-auto
+                  quality="100"
+                  format="webp"
+                  fit="contain"
+                  width="600"
+                  alt="Brand Logo"
+                  src="Assets/Home/Header.png"
+              /></v-flex>
+            </v-layout>
+            <!-- <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/> -->
+          </v-col>
+          <v-col class="px-10 align-right HeaderText" cols="6">
+            <v-card-title class="pa-0 pb-2 MobileText py-7"
+              >Mobile</v-card-title
+            >
+            <v-card-title class="pa-0 pb-2 ApplicationText py-7"
+              >Application</v-card-title
+            >
+            <v-card-title class="pa-0 pb-2 DevelopmentText py-7"
+              >Development</v-card-title
+            >
+            <v-card-title class="pa-0 pb-2 CompetitionText py-7"
+              >Competition <i class="mx-1"> &amp </i> Exhibition</v-card-title
+            >
+            <button class="button-2 mt-10" role="button">
+              <span>Register Now</span>
+            </button>
+          </v-col>
+        </v-row>
+        <v-row class="dateTime mt-7">
+          <v-col cols="4"
+            ><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col
+          >
+          <v-col cols="4">09.00 AM Onwards</v-col>
+          <v-col cols="4">Faculty of Computing</v-col>
+        </v-row>
+      </v-container>
+    </v-sheet>
     <v-sheet color="#19589D" class="pt-8 pb-8 text-center">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
-          <v-col class="px-10">
+          <v-col class="px-10" cols="6">
             <v-card-title class="pa-0 pb-2 cardTitle"
               >What is MAD-FEST?</v-card-title
             >
@@ -21,17 +67,20 @@
               effort.
             </v-card-text>
           </v-col>
-          <v-col>
-            <v-img
-              quality="100"
-              format="webp"
-              fit="contain"
-              width="450"
-              alt="Brand Logo"
-              src="Assets/Home/whatis.png"
-            />
+          <v-col cols="6">
+            <v-layout justify-center align-center>
+              <v-flex shrink>
+                <v-img
+                  mx-auto
+                  quality="100"
+                  format="webp"
+                  fit="contain"
+                  width="450"
+                  alt="Brand Logo"
+                  src="Assets/Home/whatis.png"
+              /></v-flex>
+            </v-layout>
             <!-- <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/> -->
-            
           </v-col>
         </v-row>
         <v-row class="dateTime mt-7">
@@ -48,11 +97,7 @@
 
 
 <script>
-import Lottie from "lottie-vuejs";
 export default {
-  components: {
-    Lottie,
-  },
 };
 </script>
 
@@ -74,5 +119,48 @@ export default {
   font-size: 24px;
   font-weight: 500;
   color: white;
+}
+.HeaderText {
+  text-align: right !important;
+  text-align-last: right !important;
+  direction: rtl !important;
+}
+.MobileText {
+  color: #19589d;
+  font-size: 64px;
+  font-weight: bold;
+}
+.DevelopmentText {
+  color: #525252;
+  font-size: 64px;
+  font-weight: bold;
+}
+.ApplicationText {
+  color: #39b54a;
+  font-size: 64px;
+  font-weight: bold;
+}
+.CompetitionText {
+  color: #19589d;
+  font-size: 40px;
+  font-weight: 500;
+}
+.button-2 {
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: rgb(56, 56, 56);
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #8dc63f;
+  box-shadow: 5px 5px 10px rgba(226, 226, 226, 0.664);
+}
+.button-2:hover {
+  background: linear-gradient(88.18deg, #19589d 0.34%, #8dc63f 121.79%);
 }
 </style>
