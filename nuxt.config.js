@@ -6,7 +6,21 @@ export default {
   router: {
     base: '/MADFest-Website/'
   },
-
+  extractCSS: {
+    ignoreOrder: true
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.(css|vue)$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - MADFest',
