@@ -1,9 +1,6 @@
-name: CI/CD
+name: cd
 
-'on':
-  push:
-    branches:
-      - workflowcheck
+on: [push, pull_request]
 
 jobs:
   cd:
