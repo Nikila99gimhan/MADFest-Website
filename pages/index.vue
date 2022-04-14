@@ -31,6 +31,9 @@
             <v-card-title class="pa-0 pb-2 CompetitionText py-7"
               >Competition <i class="mx-1"> &amp </i> Exhibition</v-card-title
             >
+
+            <flip-countdown deadline="2022-12-30 00:00"></flip-countdown>
+
             <button class="button-2 mt-10" role="button">
               <span>Register Now</span>
             </button>
@@ -96,8 +99,11 @@
 
 
 <script>
+import FlipCountdown from 'vue2-flip-countdown';
+
 export default {
-};
+  components: { FlipCountdown }
+}
 </script>
 
 <style>
