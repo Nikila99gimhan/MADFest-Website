@@ -3,7 +3,7 @@
     <v-sheet color="#ffffff" class="pt-8 text-center">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
-          <v-col cols="6">
+          <v-col>
             <v-layout justify-center align-center>
               <v-flex shrink>
                 <v-img
@@ -18,12 +18,13 @@
             </v-layout>
             <!-- <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/> -->
           </v-col>
-          <v-col class="px-10 align-right HeaderText" cols="6">
-
+          <v-col class="px-10 align-right HeaderText">
             <div class="pa-0 MobileText">Mobile</div>
             <div class="pa-0 ApplicationText">Application</div>
             <div class="pa-0 DevelopmentText">Development</div>
-            <div class="pa-0 pb-8 CompetitionText">Competition <i class="mx-1"> &amp </i> Exhibition</div>
+            <div class="pa-0 pb-8 CompetitionText">
+              Competition <i class="mx-1"> &amp </i> Exhibition
+            </div>
 
             <client-only>
               <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
@@ -35,22 +36,18 @@
           </v-col>
         </v-row>
         <v-row class="dateTime mt-7">
-          <v-col cols="4"
-            ><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col
-          >
-          <v-col cols="4">09.00 AM Onwards</v-col>
-          <v-col cols="4">Faculty of Computing</v-col>
+          <v-col><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col>
+          <v-col>09.00 AM Onwards</v-col>
+          <v-col>Faculty of Computing</v-col>
         </v-row>
       </v-container>
     </v-sheet>
-    <v-sheet color="#19589D" class="pt-8 pb-8 text-center">
+    <v-sheet color="#19589D" class="pt-8 pb-8">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
-          <v-col class="px-10" cols="6">
-            <v-card-title class="pa-0 pb-2 cardTitle"
-              >What is MAD-FEST?</v-card-title
-            >
-            <v-card-text class="pa-0 pb-2 text-justify cardSubtitle py-8">
+          <v-col class="px-10">
+            <div class="pa-0 pb-2 cardTitle">What is MAD-FEST?</div>
+            <divt class="pa-0 pb-2 cardSubtitle text-right py-8">
               MAD-Fest 2022 is the first- ever Mobile Application Development
               base competition and exhibition organized by Department of
               Software Engineering & Computer Science in Faculty of Computing,
@@ -62,9 +59,9 @@
               sessions.Do u look right place to give a value for your valuable
               projects? Join with us and give a great value for your priceless
               effort.
-            </v-card-text>
+            </divt>
           </v-col>
-          <v-col cols="6">
+          <v-col>
             <v-layout justify-center align-center>
               <v-flex shrink>
                 <v-img
@@ -104,16 +101,16 @@ export default {
 <style>
 .cardTitle {
   color: white;
-  font-size: 45px;
-  font-weight: 600;
+  font-size: 45px !important;
+  font-weight: 600 !important;
   letter-spacing: -0px;
 }
 .cardSubtitle {
   letter-spacing: 0px;
   line-height: 25px;
   color: white;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 20px !important;
+  font-weight: 300 !important;
 }
 .dateTime {
   font-size: 24px;
