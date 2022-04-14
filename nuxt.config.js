@@ -2,7 +2,10 @@ import colors from "vuetify/es5/util/colors";
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
+  target: 'static',
+  router: {
+    base: '/MADFest-Website/'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -40,8 +43,6 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxt/image',
-    '@nuxtjs/pwa',
-    '@nuxtjs/web-vitals',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -49,7 +50,10 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ["~/assets/variables.scss"],
+    customVariables: ['~/assets/variables.scss'],
+    font: {
+      family: 'Poppins'
+    },
     theme: {
       dark: false,
       themes: {
@@ -87,5 +91,7 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-};
+  build: {
+    analyze: false,
+  }
+}
