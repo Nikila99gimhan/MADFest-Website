@@ -32,9 +32,9 @@
               >Competition <i class="mx-1"> &amp </i> Exhibition</v-card-title
             >
 
-            <no-ssr>
+            <client-only>
               <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
-            </no-ssr>
+            </client-only>
 
             <button class="button-2 mt-4 mr-4" role="button">
               <span>Register Now</span>
