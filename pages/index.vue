@@ -20,10 +20,10 @@
           </v-col>
           <v-col class="px-10 align-right HeaderText" cols="6">
 
-            <div class="pa-0 pb-2 MobileText py-7">Mobile</div>
-            <div class="pa-0 pb-2 ApplicationText py-7">Application</div>
-            <div class="pa-0 pb-2 DevelopmentText py-7">Development</div>
-            <div class="pa-0 pb-8 CompetitionText py-7">Competition <i class="mx-1"> &amp </i> Exhibition</div>
+            <div class="pa-0 MobileText">Mobile</div>
+            <div class="pa-0 ApplicationText">Application</div>
+            <div class="pa-0 DevelopmentText">Development</div>
+            <div class="pa-0 pb-8 CompetitionText">Competition <i class="mx-1"> &amp </i> Exhibition</div>
 
             <client-only>
               <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
@@ -129,6 +129,7 @@ export default {
   color: #19589d;
   font-size: 64px;
   font-weight: bold;
+  margin-bottom: -25px !important;
 }
 .DevelopmentText {
   color: #525252;
@@ -139,11 +140,13 @@ export default {
   color: #39b54a;
   font-size: 64px;
   font-weight: bold;
+  margin-bottom: -25px !important;
 }
 .CompetitionText {
   color: #19589d;
   font-size: 35px;
   font-weight: 500;
+  margin-bottom: -25px !important;
 }
 .button-2 {
   padding: 1rem 3rem;
