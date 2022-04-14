@@ -19,18 +19,11 @@
             <!-- <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/> -->
           </v-col>
           <v-col class="px-10 align-right HeaderText" cols="6">
-            <v-card-title class="pa-0 pb-2 MobileText py-7"
-              >Mobile</v-card-title
-            >
-            <v-card-title class="pa-0 pb-2 ApplicationText py-7"
-              >Application</v-card-title
-            >
-            <v-card-title class="pa-0 pb-2 DevelopmentText py-7"
-              >Development</v-card-title
-            >
-            <v-card-title class="pa-0 pb-8 CompetitionText py-7"
-              >Competition <i class="mx-1"> &amp </i> Exhibition</v-card-title
-            >
+
+            <div class="pa-0 pb-2 MobileText py-7">Mobile</div>
+            <div class="pa-0 pb-2 ApplicationText py-7">Application</div>
+            <div class="pa-0 pb-2 DevelopmentText py-7">Development</div>
+            <div class="pa-0 pb-8 CompetitionText py-7">Competition <i class="mx-1"> &amp </i> Exhibition</div>
 
             <client-only>
               <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
@@ -149,7 +142,7 @@ export default {
 }
 .CompetitionText {
   color: #19589d;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
 }
 .button-2 {
