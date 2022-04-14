@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet color="#ffffff" class="pt-8 pb-8 text-center">
+    <v-sheet color="#ffffff" class="pt-8 text-center">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
           <v-col cols="6">
@@ -28,10 +28,15 @@
             <v-card-title class="pa-0 pb-2 DevelopmentText py-7"
               >Development</v-card-title
             >
-            <v-card-title class="pa-0 pb-2 CompetitionText py-7"
+            <v-card-title class="pa-0 pb-8 CompetitionText py-7"
               >Competition <i class="mx-1"> &amp </i> Exhibition</v-card-title
             >
-            <button class="button-2 mt-10" role="button">
+
+            <no-ssr>
+              <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
+            </no-ssr>
+
+            <button class="button-2 mt-4 mr-4" role="button">
               <span>Register Now</span>
             </button>
           </v-col>
@@ -96,7 +101,10 @@
 
 
 <script>
+import FlipCountdown from "vue2-flip-countdown";
+
 export default {
+  components: { FlipCountdown },
 };
 </script>
 
@@ -161,5 +169,24 @@ export default {
 }
 .button-2:hover {
   background: linear-gradient(88.18deg, #19589d 0.34%, #8dc63f 121.79%);
+}
+.flip-card__top {
+  background-color: #8dc63f !important;
+  color: #ffffff !important;
+}
+.flip-card__bottom {
+  background-color: #8dc63f !important;
+  color: #ffffff !important;
+}
+
+.flip-card__back-bottom {
+  background-color: #8dc63f !important;
+  color: #ffffff !important;
+}
+.flip-clock__slot {
+  color: #19589d !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  margin-top: 4px !important;
 }
 </style>
