@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet color="#ffffff" class="pt-8 pb-8 text-center">
+    <v-sheet color="#ffffff" class="pt-8 text-center">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
           <v-col cols="6">
@@ -33,10 +33,7 @@
             >
 
             <no-ssr>
-              <flip-countdown
-                deadline="2022-06-25 00:00:00"
-                @timeElapsed="timeElapsedHandler"
-              ></flip-countdown>
+              <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
             </no-ssr>
 
             <button class="button-2 mt-4 mr-4" role="button">
