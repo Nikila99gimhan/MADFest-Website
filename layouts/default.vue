@@ -1,5 +1,33 @@
 <template>
   <v-app dark>
+    <v-toolbar>
+      <v-toolbar-title>
+        
+        <v-img 
+        src="Assets/Navigation/logo_alt.png"
+        width="250"
+        class="ml-sm-16"
+        ></v-img>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn v-for="item in menu" :key="item.link" :to="item.link" >{{
+          item.title
+        }}</v-btn>
+      </v-toolbar-items>
+      <v-menu class="hidden-md-and-up">
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+        <v-list>
+          <v-list-item v-for="item in menu" :key="item.icon">
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+
+    <!-- main container -->
     <v-main>
       <Nuxt />
     </v-main>
@@ -91,19 +119,30 @@ export default {
       title: "MADFest",
       loader: null,
       loading4: false,
+      menu: [
+        { icon: "home", title: "Link A" },
+        { icon: "info", title: "Link B" },
+        { icon: "warning", title: "Link C" },
+      ],
     };
   },
 
-  watch: {
-    loader() {
-      const l = this.loader;
-      this[l] = !this[l];
-
-      setTimeout(() => (this[l] = false), 3000);
-
-      this.loader = null;
+  methods: {
+    menuItems() {
+      return this.menu;
     },
   },
+
+  // watch: {
+  //   loader() {
+  //     const l = this.loader;
+  //     this[l] = !this[l];
+
+  //     setTimeout(() => (this[l] = false), 3000);
+
+  //     this.loader = null;
+  //   },
+  // },
 };
 </script>
 
