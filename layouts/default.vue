@@ -1,31 +1,53 @@
 <template>
-  <v-app dark>
-    <v-toolbar>
-      <v-toolbar-title>
-        
-        <v-img 
-        src="Assets/Navigation/logo_alt.png"
-        width="250"
-        class="ml-sm-16"
-        ></v-img>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn v-for="item in menu" :key="item.link" :to="item.link" >{{
-          item.title
-        }}</v-btn>
-      </v-toolbar-items>
-      <v-menu class="hidden-md-and-up">
-        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+  <v-app>
+    <div>
+      <v-app-bar color="white">
+        <v-toolbar-title class="ml-sm-16">
+          <v-img src="Assets/Navigation/logo_alt.png" width="250"></v-img>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+
+        <span class="hidden-sm-and-up">
+          <v-app-bar-nav-icon
+            x-large
+            color="#125596"
+            @click.stop="drawer = !drawer"
+          ></v-app-bar-nav-icon>
+        </span>
+        <v-toolbar-items class="mr-16 hidden-xs-only">
+          <v-btn text color="#125596"><h3 font-weight-700>Home</h3></v-btn>
+          <v-btn text color="#125596"><h3 font-weight-700>About</h3></v-btn>
+          <v-btn text color="#125596"><h3 font-weight-700>Timeline</h3></v-btn>
+          <v-btn text color="#125596"><h3 font-weight-700>FAQ</h3></v-btn>
+        </v-toolbar-items>
+      </v-app-bar>
+
+      <!-- navigation drawer -->
+      <v-navigation-drawer
+        v-model="drawer"
+        app
+        clipped
+        temporary
+        fixed
+        color="#125596"
+      >
         <v-list>
-          <v-list-item v-for="item in menu" :key="item.icon">
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            :to="item.link"
+            link
+          >
             <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title
+                class="white--text pl-5"
+                ><h4 font-weight-700>{{ item.title }}</h4></v-list-item-title
+              >
             </v-list-item-content>
           </v-list-item>
         </v-list>
-      </v-menu>
-    </v-toolbar>
+      </v-navigation-drawer>
+    </div>
 
     <!-- main container -->
     <v-main>
@@ -119,10 +141,12 @@ export default {
       title: "MADFest",
       loader: null,
       loading4: false,
-      menu: [
-        { icon: "home", title: "Link A" },
-        { icon: "info", title: "Link B" },
-        { icon: "warning", title: "Link C" },
+      drawer: false,
+      items: [
+        { title: "Home", link: "/" },
+        { title: "About", link: "about" },
+        { title: "Timeline", link: "timeline" },
+        { title: "FAQ", link: "faq" },
       ],
     };
   },
