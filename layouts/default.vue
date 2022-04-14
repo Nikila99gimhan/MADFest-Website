@@ -21,7 +21,7 @@
                   :aspect-ratio="16 / 9"
                   contain
                   alt="Brand Logo"
-                  src="Assets/Footer/DEpartment.png"
+                  src="Assets/Footer/Department.png"
               /></v-col>
               <v-col cols="3"
                 ><v-img
