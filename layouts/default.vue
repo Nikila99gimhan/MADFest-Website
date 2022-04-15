@@ -143,10 +143,10 @@ export default {
       loading4: false,
       drawer: false,
       items: [
-        { title: "Home", link: "/" },
-        { title: "About", link: "about" },
-        { title: "Timeline", link: "timeline" },
-        { title: "FAQ", link: "faq" },
+        { title: "Home"},
+        { title: "About" },
+        { title: "Timeline" },
+        { title: "FAQ" },
       ],
     };
   },

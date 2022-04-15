@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-sheet color="#ffffff" class="pt-8 text-center">
+    <v-sheet color="#ffffff" class="text-center">
       <v-container>
-        <v-row align="center" no-gutters class="mt-8">
+        <v-row align="center" no-gutters>
           <v-col>
             <v-layout justify-center align-center>
               <v-flex shrink>
@@ -42,12 +42,12 @@
         </v-row>
       </v-container>
     </v-sheet>
-    <v-sheet color="#19589D" class="pt-8 pb-8">
+    <v-sheet color="#19589D" class="pt-8 pb-8 text-right">
       <v-container>
-        <v-row align="center" no-gutters class="mt-8">
-          <v-col class="px-10">
+        <v-row align="center" no-gutters class="mt-8 text-right">
+          <v-col class="px-10 text-left">
             <div class="pa-0 pb-2 cardTitle">What is MAD-FEST?</div>
-            <divt class="pa-0 pb-2 cardSubtitle text-right py-8">
+            <div class="pa-0 pb-2 cardSubtitle text-left py-8">
               MAD-Fest 2022 is the first- ever Mobile Application Development
               base competition and exhibition organized by Department of
               Software Engineering & Computer Science in Faculty of Computing,
@@ -59,7 +59,7 @@
               sessions.Do u look right place to give a value for your valuable
               projects? Join with us and give a great value for your priceless
               effort.
-            </divt>
+            </div>
           </v-col>
           <v-col>
             <v-layout justify-center align-center>
@@ -79,7 +79,7 @@
         </v-row>
         <v-row class="dateTime mt-7">
           <v-col cols="4"
-            ><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col
+            ><v-icon>mdi-calender-range</v-icon>25<sup>th</sup> of May 2022</v-col
           >
           <v-col cols="4">09.00 AM Onwards</v-col>
           <v-col cols="4">Faculty of Computing</v-col>
@@ -104,6 +104,7 @@ export default {
   font-size: 45px !important;
   font-weight: 600 !important;
   letter-spacing: -0px;
+  text-align: left !important;
 }
 .cardSubtitle {
   letter-spacing: 0px;
@@ -111,6 +112,7 @@ export default {
   color: white;
   font-size: 20px !important;
   font-weight: 300 !important;
+  justify-content: left !important;
 }
 .dateTime {
   font-size: 24px;
