@@ -45,7 +45,7 @@
     <v-sheet color="#19589D" class="pt-8 pb-8 text-right">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
-          <v-col class="px-10" cols="12" sm="6">
+          <v-col class="px-sm-0" cols="12" sm="6">
             <v-card-title class="pa-0 pb-2 cardTitle"
               >What is MAD-FEST?</v-card-title
             >
@@ -80,17 +80,17 @@
           </v-col>
         </v-row>
         <v-row class="dateTime mt-7">
-          <v-col cols="12" sm="4">
+          <v-col cols="12" sm="4" class="d-flex justify-center align-center">
             <v-icon color="white" size="35" class="mr-2 mb-2"
               >mdi-calendar-month-outline</v-icon
             >25 of May 2022
           </v-col>
-          <v-col cols="12" sm="4"
+          <v-col cols="12" sm="4" class="d-flex justify-center align-center"
             ><v-icon color="white" size="35" class="mr-2 mb-1"
               >mdi-clock-time-nine-outline </v-icon
             >09.00 AM Onwards</v-col
           >
-          <v-col cols="12" sm="4"
+          <v-col cols="12" sm="4" class="d-flex justify-center align-center"
             ><v-icon color="white" size="35" class="mr-2"
               >mdi-map-marker-outline </v-icon
             >Faculty of Computing</v-col
@@ -202,8 +202,7 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .cardTitle {
-    color: white;
-    font-size: 30px;
+    font-size: 35px !important;
   }
   .MobileText {
     font-weight: 700;
