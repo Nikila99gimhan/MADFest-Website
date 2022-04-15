@@ -3,9 +3,6 @@ import colors from "vuetify/es5/util/colors";
 export default {
   target: 'static',
   ssr: false,
-  router: {
-    base: '/MADFest-Website/'
-  },
   head: {
     titleTemplate: "%s - MADFest",
     title: "MADFest",
