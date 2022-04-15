@@ -1,5 +1,55 @@
 <template>
-  <v-app dark>
+  <v-app>
+    <div>
+      <v-app-bar color="white">
+        <v-toolbar-title class="ml-sm-16">
+          <v-img src="Assets/Navigation/logo_alt.png" width="250"></v-img>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+
+        <span class="hidden-sm-and-up">
+          <v-app-bar-nav-icon
+            x-large
+            color="#125596"
+            @click.stop="drawer = !drawer"
+          ></v-app-bar-nav-icon>
+        </span>
+        <v-toolbar-items class="mr-16 hidden-xs-only">
+          <v-btn text color="#125596"><h3 font-weight-700>Home</h3></v-btn>
+          <v-btn text color="#125596"><h3 font-weight-700>About</h3></v-btn>
+          <v-btn text color="#125596"><h3 font-weight-700>Timeline</h3></v-btn>
+          <v-btn text color="#125596"><h3 font-weight-700>FAQ</h3></v-btn>
+        </v-toolbar-items>
+      </v-app-bar>
+
+      <!-- navigation drawer -->
+      <v-navigation-drawer
+        v-model="drawer"
+        app
+        clipped
+        temporary
+        fixed
+        color="#125596"
+      >
+        <v-list>
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            :to="item.link"
+            link
+          >
+            <v-list-item-content>
+              <v-list-item-title
+                class="white--text pl-5"
+                ><h4 font-weight-700>{{ item.title }}</h4></v-list-item-title
+              >
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+    </div>
+
+    <!-- main container -->
     <v-main>
       <Nuxt />
     </v-main>
@@ -91,19 +141,32 @@ export default {
       title: "MADFest",
       loader: null,
       loading4: false,
+      drawer: false,
+      items: [
+        { title: "Home"},
+        { title: "About" },
+        { title: "Timeline" },
+        { title: "FAQ" },
+      ],
     };
   },
 
-  watch: {
-    loader() {
-      const l = this.loader;
-      this[l] = !this[l];
-
-      setTimeout(() => (this[l] = false), 3000);
-
-      this.loader = null;
+  methods: {
+    menuItems() {
+      return this.menu;
     },
   },
+
+  // watch: {
+  //   loader() {
+  //     const l = this.loader;
+  //     this[l] = !this[l];
+
+  //     setTimeout(() => (this[l] = false), 3000);
+
+  //     this.loader = null;
+  //   },
+  // },
 };
 </script>
 

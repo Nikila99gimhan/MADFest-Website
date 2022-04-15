@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet color="#ffffff" class="pt-8 text-center">
+    <v-sheet color="#ffffff" class="text-center">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
           <v-col cols="12" sm="6" order-sm="first" class="hidden-xs-only">
@@ -36,15 +36,13 @@
           </v-col>
         </v-row>
         <v-row class="dateTime mt-7">
-          <v-col cols="4"
-            ><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col
-          >
-          <v-col cols="4">09.00 AM Onwards</v-col>
-          <v-col cols="4">Faculty of Computing</v-col>
+          <v-col><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col>
+          <v-col>09.00 AM Onwards</v-col>
+          <v-col>Faculty of Computing</v-col>
         </v-row>
       </v-container>
     </v-sheet>
-    <v-sheet color="#19589D" class="pt-8 pb-8 text-center">
+    <v-sheet color="#19589D" class="pt-8 pb-8 text-right">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
           <v-col class="px-10" cols="12" sm="6">
@@ -115,17 +113,19 @@ export default {
 <style>
 .cardTitle {
   color: white;
-  font-size: 45px;
-  font-weight: 600;
+  font-size: 45px !important;
+  font-weight: 600 !important;
   letter-spacing: -0px;
+  text-align: left !important;
 }
 
 .cardSubtitle {
   letter-spacing: 0px;
   line-height: 25px;
   color: white;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  justify-content: left !important;
 }
 .dateTime {
   font-size: 24px;
