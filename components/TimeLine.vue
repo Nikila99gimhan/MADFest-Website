@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-16">
     <v-row class="py-10"
       ><v-col><h1 class="Title">TIMELINE</h1></v-col></v-row
     >

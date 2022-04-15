@@ -98,7 +98,10 @@
         </v-row>
       </v-container>
     </v-sheet>
+    <!-- timeline component -->
     <timeLine/>
+    <!-- FAQ conponent -->
+    <faq/>
   </div>
 </template>
 
@@ -106,9 +109,10 @@
 <script>
 import FlipCountdown from "vue2-flip-countdown";
 import timeLine from "../components/TimeLine";
+import faq from "../components/FaqBanner"
 
 export default {
-  components: { FlipCountdown,timeLine },
+  components: { FlipCountdown,timeLine,faq },
 };
 </script>
 
