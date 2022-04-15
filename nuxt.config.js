@@ -17,6 +17,13 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+      { name: "title", content: "MADFest"},
+      { name: "description", content: "MADFest is a Mobile Application Development competition organized by the Department of SE & CS in FOC, NSBM with IEEE CS Chapter of NSBM."},
+      { name: "keywords", content: "Mobile,Hackathon,Developement,Competition,NSBM,IEEE"},
+      { name: "robots", content: "index, follow"},
+      { name: "language", content: "English"},
+      { name: "revisit-after", content: "2 days"},
+
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -41,7 +48,6 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/vuetify',
-    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -49,12 +55,14 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    treeShake: true,
     customVariables: ['~/assets/variables.scss'],
     font: {
       family: 'Poppins'
     },
     theme: {
       dark: false,
+
       themes: {
         light: {
           primary: "#125596", //colors.blue.darken2,
@@ -81,6 +89,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    analyze: false,
+    analyze: true,
+    extractCSS: true,
   }
 }
