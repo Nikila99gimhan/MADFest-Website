@@ -6,15 +6,15 @@
           <v-col cols="12" sm="6" order-sm="first" class="hidden-xs-only">
             <v-layout justify-center align-center>
               <v-flex shrink>
-                <v-img
+                <nuxt-img
                   mx-auto
-                  quality="100"
+                  quality="90"
                   format="webp"
                   fit="contain"
                   width="600"
                   alt="Brand Logo"
-                  src="Assets/Home/Header.png"
-              /></v-flex>
+                  src="Assets/Home/Header.png"/>
+              </v-flex>
             </v-layout>
             <!-- <lottie-animation path="Assets/Home/whatIsMadFest.json" :width="450"/> -->
           </v-col>
@@ -66,9 +66,9 @@
           <v-col cols="12" sm="6">
             <v-layout justify-center align-center>
               <v-flex shrink>
-                <v-img
+                <nuxt-img
                   mx-auto
-                  quality="100"
+                  quality="90"
                   format="webp"
                   fit="contain"
                   width="450"

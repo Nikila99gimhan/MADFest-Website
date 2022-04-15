@@ -21,9 +21,7 @@
   "devDependencies": {
     "@nuxt/image": "^0.6.2",
     "@nuxt/types": "~2.15.0",
-    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/vuetify": "^1.12.3",
-    "@nuxtjs/web-vitals": "^0.1.8",
     "husky": "^7.0.4",
     "push-dir": "^0.4.1"
   }

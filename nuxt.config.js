@@ -1,13 +1,11 @@
 import colors from "vuetify/es5/util/colors";
 
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
   router: {
     base: '/MADFest-Website/'
   },
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - MADFest",
     title: "MADFest",
@@ -42,7 +40,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxt/image',
   ],
@@ -70,16 +67,6 @@ export default {
         },
       },
     },
-  },
-
-  loading: {
-    color: 'white',
-    height: '5px'
-  },
-
-
-  generate: {
-    dir: 'docs'
   },
 
   loading: {
