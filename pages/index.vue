@@ -91,15 +91,17 @@
         </v-row>
       </v-container>
     </v-sheet>
+    <timeLine/>
   </div>
 </template>
 
 
 <script>
 import FlipCountdown from "vue2-flip-countdown";
+import timeLine from "../components/TimeLine";
 
 export default {
-  components: { FlipCountdown },
+  components: { FlipCountdown,timeLine },
 };
 </script>
 
