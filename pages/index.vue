@@ -6,11 +6,8 @@
           <v-col cols="12" sm="6" order-sm="first" class="hidden-xs-only">
             <v-layout justify-center align-center>
               <v-flex shrink>
-                <nuxt-img
+                <v-img
                   mx-auto
-                  quality="90"
-                  format="webp"
-                  fit="contain"
                   width="600"
                   alt="Brand Logo"
                   src="Assets/Home/Header.png"/>
@@ -66,11 +63,8 @@
           <v-col cols="12" sm="6">
             <v-layout justify-center align-center>
               <v-flex shrink>
-                <nuxt-img
+                <v-img
                   mx-auto
-                  quality="90"
-                  format="webp"
-                  fit="contain"
                   width="450"
                   alt="Brand Logo"
                   src="Assets/Home/whatis.png"
