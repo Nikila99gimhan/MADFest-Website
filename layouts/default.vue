@@ -1,7 +1,13 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar fixed color="white">
+      <v-app-bar
+        fixed
+        color="white"
+        flat
+        style="border-bottom: 1px solid #d2d2d2 !important"
+        app
+      >
         <v-toolbar-title class="ml-sm-16">
           <v-img src="Assets/Navigation/logo_alt.png" width="250"></v-img>
         </v-toolbar-title>
@@ -15,10 +21,18 @@
           ></v-app-bar-nav-icon>
         </span>
         <v-toolbar-items class="mr-16 hidden-xs-only">
-          <v-btn text color="#125596" href="#home"><h3 font-weight-700>Home</h3></v-btn>
-          <v-btn text color="#125596" href="#about" ><h3 font-weight-700>About</h3></v-btn>
-          <v-btn text color="#125596" href="#timeline"><h3 font-weight-700>Timeline</h3></v-btn>
-          <v-btn text color="#125596" href="#faq"><h3 font-weight-700>FAQ</h3></v-btn>
+          <v-btn text color="#125596" href="#home"
+            ><h3 font-weight-700>Home</h3></v-btn
+          >
+          <v-btn text color="#125596" href="#about"
+            ><h3 font-weight-700>About</h3></v-btn
+          >
+          <v-btn text color="#125596" href="#timeline"
+            ><h3 font-weight-700>Timeline</h3></v-btn
+          >
+          <v-btn text color="#125596" href="#faq"
+            ><h3 font-weight-700>FAQ</h3></v-btn
+          >
         </v-toolbar-items>
       </v-app-bar>
 
@@ -39,8 +53,7 @@
             link
           >
             <v-list-item-content>
-              <v-list-item-title
-                class="white--text pl-5"
+              <v-list-item-title class="white--text pl-5"
                 ><h4 font-weight-700>{{ item.title }}</h4></v-list-item-title
               >
             </v-list-item-content>
@@ -145,19 +158,19 @@ export default {
       items: [
         {
           title: "Home",
-          link: "#home"
+          link: "#home",
         },
         {
           title: "About",
-          link: "#about"
+          link: "#about",
         },
         {
           title: "Timeline",
-          link: "#timeline"
+          link: "#timeline",
         },
         {
           title: "FAQ",
-          link: "#faq"
+          link: "#faq",
         },
       ],
     };

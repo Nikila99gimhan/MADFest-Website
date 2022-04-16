@@ -10,7 +10,8 @@
                   mx-auto
                   width="600"
                   alt="Brand Logo"
-                  src="Assets/Home/Header.png"/>
+                  src="Assets/Home/Header.png"
+                />
               </v-flex>
             </v-layout>
           </v-col>
@@ -92,9 +93,9 @@
       </v-container>
     </v-sheet>
     <!-- timeline component -->
-    <timeLine id="timeline"/>
+    <timeLine id="timeline" />
     <!-- FAQ conponent -->
-    <faq id="faq"/>
+    <faq id="faq" />
   </div>
 </template>
 
@@ -102,10 +103,10 @@
 <script>
 import FlipCountdown from "vue2-flip-countdown";
 import timeLine from "../components/TimeLine";
-import faq from "../components/FaqBanner"
+import faq from "../components/FaqBanner";
 
 export default {
-  components: { FlipCountdown,timeLine,faq },
+  components: { FlipCountdown, timeLine, faq },
 };
 </script>
 
@@ -200,6 +201,9 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+  #home {
+  margin-top: 0px !important;
+}
   .cardTitle {
     font-size: 35px !important;
   }
