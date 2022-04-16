@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet color="#ffffff" class="text-center">
+    <v-sheet color="#ffffff" class="text-center" id="home">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
           <v-col cols="12" sm="6" order-sm="first" class="hidden-xs-only">
@@ -38,7 +38,7 @@
         </v-row>
       </v-container>
     </v-sheet>
-    <v-sheet color="#19589D" class="pt-8 pb-8 text-right">
+    <v-sheet color="#19589D" class="pt-8 pb-8 text-right" id="about">
       <v-container>
         <v-row align="center" no-gutters class="mt-8">
           <v-col class="px-sm-0" cols="12" sm="6">
@@ -92,9 +92,9 @@
       </v-container>
     </v-sheet>
     <!-- timeline component -->
-    <timeLine/>
+    <timeLine id="timeline"/>
     <!-- FAQ conponent -->
-    <faq/>
+    <faq id="faq"/>
   </div>
 </template>
 
