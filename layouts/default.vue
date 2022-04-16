@@ -1,7 +1,13 @@
 <template>
   <v-app>
     <div>
-      <v-app-bar fixed >
+      <v-app-bar
+        fixed
+        color="white"
+        flat
+        style="border-bottom: 1px solid #d2d2d2 !important"
+        app
+      >
         <v-toolbar-title class="ml-sm-16">
           <v-img src="Assets/Navigation/logo_alt.png" width="250"></v-img>
         </v-toolbar-title>
