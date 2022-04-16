@@ -124,7 +124,7 @@ html {
   height:100vh;
 }
 #home .container{
-  margin-top:12vh !important;
+  margin-top: 10vh !important;
 }
 
 .cardTitle {
