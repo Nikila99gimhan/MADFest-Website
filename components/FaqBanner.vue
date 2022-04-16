@@ -1,9 +1,11 @@
 <template>
 <div class="mainDiv">
-  <v-row class="py-10"
-      ><v-col><h1 class="Title">FAQ</h1></v-col></v-row
-    >
-<div class="d-flex justify-center">
+  <v-row class="py-8">
+    <v-col>
+      <h1 class="Title">FAQ</h1>
+    </v-col>
+  </v-row>
+<div class="d-flex justify-center px-4">
 
       <v-expansion-panels focusable hover dark style="maxWidth: 800px;">
         <v-expansion-panel v-for="(item, i) in 5" :key="i">
@@ -19,7 +21,7 @@
 
   </div>
 </div>
-  
+
 </template>
 
 <script>
