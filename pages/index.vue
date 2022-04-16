@@ -23,20 +23,25 @@
               Competition <i class="mx-1"> &amp </i> Exhibition
             </div>
 
-            <client-only>
-              <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
-            </client-only>
-
-            <button class="button-2" role="button">
-              <span>Register Now</span>
-            </button>
+            <div class="hidden-xs-only">
+              <client-only>
+                <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
+              </client-only>
+              <button class="button-2" role="button">
+                <span>Register Now</span>
+              </button>
+            </div>
           </v-col>
         </v-row>
-        <v-row class="dateTime mt-7">
-          <v-col><v-icon>mdi-calender-range</v-icon>25 of May 2022</v-col>
-          <v-col>09.00 AM Onwards</v-col>
-          <v-col>Faculty of Computing</v-col>
-        </v-row>
+
+        <div class="hidden-sm-and-up">
+          <client-only>
+            <flip-countdown deadline="2022-06-25 00:00:00"></flip-countdown>
+          </client-only>
+          <button class="button-2" role="button">
+            <span>Register Now</span>
+          </button>
+        </div><!-- only shows when xs -->
       </v-container>
     </v-sheet>
     <v-sheet color="#19589D" class="pt-8 pb-8 text-right" id="about">
@@ -111,6 +116,17 @@ export default {
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
+#home{
+  height:100vh;
+}
+#home .container{
+  margin-top:12vh !important;
+}
+
 .cardTitle {
   color: white;
   font-size: 45px !important;
@@ -143,17 +159,20 @@ export default {
   font-weight: bold;
   margin-bottom: -25px !important;
 }
-.DevelopmentText {
-  color: #525252;
-  font-size: 64px;
-  font-weight: bold;
-}
+
 .ApplicationText {
   color: #39b54a;
   font-size: 64px;
   font-weight: bold;
   margin-bottom: -25px !important;
 }
+
+.DevelopmentText {
+  color: #525252;
+  font-size: 64px;
+  font-weight: bold;
+}
+
 .CompetitionText {
   color: #19589d;
   font-size: 35px;
@@ -200,24 +219,35 @@ export default {
   margin-top: 4px !important;
 }
 
-@media only screen and (max-width: 600px) {
-  #home {
-  margin-top: 0px !important;
-}
+
+@media only screen and (max-width: 499px) {
+
+  #about .container{
+    width: 90%;
+
+  }
+
+  .flip-card{
+    font-size: 2.0rem !important;
+    margin-left:2px !important;
+  }
+
+  .flip-clock__slot {
+    font-size: 12px !important;
+  }
+
+  .HeaderText {
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+
+
   .cardTitle {
-    font-size: 35px !important;
+    font-size: 25px !important;
   }
-  .MobileText {
-    font-weight: 700;
-    font-size: 50px;
-  }
-  .ApplicationText {
-    font-weight: 700;
-    font-size: 50px;
-  }
-  .DevelopmentText {
-    font-weight: 700;
-    font-size: 50px;
+
+  .MobileText , .ApplicationText , .DevelopmentText {
+    font-size: 40px;
   }
 
   .CompetitionText {
